@@ -13,8 +13,8 @@ const WeatherComponent = () => {
           `http://api.weatherstack.com/current?access_key=739a3247527e7e7e4f3bf33335ce145e&query=Addis Ababa`
         );
 
-        setWeather(response.data); // Set weather data after fetching
-        setLoading(false); // Set loading to false once data is fetched
+        setWeather(response.data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching weather data:", error);
         setLoading(false);
@@ -24,10 +24,8 @@ const WeatherComponent = () => {
     fetchWeather();
   }, []);
 
-  // If data is still being fetched, show a loading message
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="text-black">Loading...</div>;
 
-  // Check if `weather` exists before accessing its properties
   if (!weather || !weather.current) return <div>No weather data available</div>;
 
   return (
