@@ -24,7 +24,12 @@ const WeatherComponent = () => {
     fetchWeather();
   }, []);
 
-  if (loading) return <div className="text-black">Loading...</div>;
+  if (loading)
+    return (
+      <div className="text-black font-serif text-3xl pt-6 flex items-center justify-center ">
+        Loading...
+      </div>
+    );
 
   if (!weather || !weather.current) return <div>No weather data available</div>;
 
