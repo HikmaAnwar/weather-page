@@ -1,9 +1,10 @@
-import Image from "next/image";
+import WeatherComponent from "./component/weather";
 
 export default function Home() {
   return (
     <div>
-      <h1>hey there</h1>
+      <h1>Weather Page</h1>
+      <WeatherComponent />
     </div>
   );
 }
