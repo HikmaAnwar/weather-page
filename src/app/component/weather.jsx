@@ -10,7 +10,7 @@ const WeatherComponent = () => {
     const fetchWeather = async () => {
       try {
         const response = await axios.get(
-          `http://api.weatherstack.com/current?access_key=739a3247527e7e7e4f3bf33335ce145e&query=Addis Ababa`
+          `http://api.weatherstack.com/current?access_key=739a3247527e7e7e4f3bf33335ce145e&query= dubai `
         );
 
         setWeather(response.data);
